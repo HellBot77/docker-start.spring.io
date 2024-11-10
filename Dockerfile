@@ -6,7 +6,7 @@ RUN git clone https://github.com/spring-io/start.spring.io.git && \
     ([[ "$TAG" = "latest" ]] || git checkout ${TAG})
     # rm -rf .git
 
-FROM maven:3-eclipse-temurin-21-alpine AS build
+FROM --platform=amd64 maven:3-eclipse-temurin-21-alpine AS build
 
 WORKDIR /start.spring.io
 COPY --from=base /git/start.spring.io .
