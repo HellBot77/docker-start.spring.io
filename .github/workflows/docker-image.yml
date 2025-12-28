@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  PLATFORMS: linux/arm64
+  PLATFORMS: linux/arm64,linux/amd64
   SOURCE_REPOSITORY: spring-io/start.spring.io
   DOCKERHUB_REPOSITORY: helllord/start.spring.io
 
